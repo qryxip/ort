@@ -46,7 +46,7 @@ jobs:
       - uses: Swatinem/rust-cache@v1
       - name: Run tests
         run: |
-          cargo test -p ort --verbose --features fetch-models -- --test-threads 1
+          cargo test -p voicevox-ort --verbose --features fetch-models -- --test-threads 1
   # Disable cross-compile until cross updates aarch64-unknown-linux-gnu to Ubuntu 22.04
   # ref https://github.com/cross-rs/cross/pull/973
   #cross-compile:

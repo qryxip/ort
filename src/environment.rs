@@ -260,11 +260,12 @@ extern_system_fn! {
 		);
 
 		match severity {
-			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_VERBOSE => tracing::event!(parent: &span, Level::TRACE, "{message}"),
-			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_INFO => tracing::event!(parent: &span, Level::DEBUG, "{message}"),
-			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_WARNING => tracing::event!(parent: &span, Level::INFO, "{message}"),
-			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_ERROR => tracing::event!(parent: &span, Level::WARN, "{message}"),
-			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_FATAL=> tracing::event!(parent: &span, Level::ERROR, "{message}")
+			// TODO: https://github.com/VOICEVOX/voicevox_project/issues/24 をやる際に、libonnxruntime側で`WARNING`未満のログを遮断する
+			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_VERBOSE | ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_INFO => {}
+			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_WARNING => tracing::event!(parent: &span, Level::WARN, "{message}"),
+			ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_ERROR | ort_sys::OrtLoggingLevel::ORT_LOGGING_LEVEL_FATAL => {
+				tracing::event!(parent: &span, Level::ERROR, "{message}");
+			}
 		}
 	}
 }
