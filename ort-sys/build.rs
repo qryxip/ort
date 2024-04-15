@@ -303,74 +303,74 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 			let target = env::var("TARGET").unwrap().to_string();
 			let (prebuilt_url, prebuilt_hash) = match target.as_str() {
 				"aarch64-apple-darwin" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-osx-arm64-1.17.0.tgz",
-					"9391BD67F47F911FC9348844A0D8DCC09742E521F677F11D339EBD2D873189FF"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-osx-arm64-1.17.1.tgz",
+					"94D43F3C3C00FB92D981EBA2A05C35EC5CD0C61F8050D6A7CB489BEF79414F7D"
 				),
 				//"aarch64-pc-windows-msvc" => (
-				// 	"https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.0/ortrs-msort_static-v1.17.0-aarch64-pc-windows-msvc.tgz",
-				// 	"27DDC61E1416E3F1BC6137C8365B563F73BA5A6CE8D7008E5CD4E36B4F037FDA"
+				//        "https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-msort_static-v1.17.1-aarch64-pc-windows-msvc.tgz",
+				//        "5AA68F5DB1BA1A5084E00E3C60AB4FA6BDEECA05104DACA8B88D6DBCC178EBF5"
 				//),
 				"aarch64-unknown-linux-gnu" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-linux-arm64-1.17.0.tgz",
-					"F7FE4F8BAA348229AD1CCBF1A1EFE57061E15280E4CFA18EC21508ADE3760EA4"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-linux-arm64-1.17.1.tgz",
+					"927672E36D3B2F71DDBDF4F3D0F02E44692E523047B59FD79FAACB25FC9472C4"
 				),
 				//"wasm32-unknown-emscripten" => (
-				// 	"https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.0/ortrs-msort_static-v1.17.0-wasm32-unknown-emscripten.tgz",
-				// 	"E1ADBF06922649A59AB9D0459E9D5985B002C3AE830B512B7AED030BDA859C55"
+				//        "https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-msort_static-v1.17.1-wasm32-unknown-emscripten.tgz",
+				//        "58EAD204FE53A488489287FFD97113E89A2CCA91876D3186CDBCA10A4F5A3287"
 				//),
 				"x86_64-apple-darwin" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-osx-x86_64-1.17.0.tgz",
-					"ADDA1382FD1DBCCA05F93E19F455585D16910F5B621AB2F068BC46B2D5DEB045"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-osx-x86_64-1.17.1.tgz",
+					"D23B125F3042BF045B6E00DB8BAEF10EC8CBB66021B174646B490601EA986E80"
 				),
 				"x86_64-pc-windows-msvc" => {
 					if cfg!(any(feature = "cuda", feature = "directml")) {
 						(
-							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-win-x64-gpu-1.17.0.tgz",
-							"47603969633BA650704D2A12F12977C14DB780AF13F96AF72EE44D99045F2331"
+							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-win-x64-gpu-1.17.1.tgz",
+							"79A30CBE3173E1C74EDF01F288CD361C3521369653614E0A8A5E5175F2209F8A"
 						)
 					} else {
 						(
-							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-win-x64-1.17.0.tgz",
-							"3DD15FBE4A0A689CA324BBA2319D81C3631537C8243140FA1F93A609DA8E7F10"
+							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-win-x64-1.17.1.tgz",
+							"97022D07BECCB62473E94609B113706BE36AA5D213DB6F6234F8C40833E98C68"
 						)
 					}
 				}
 				"x86_64-unknown-linux-gnu" => {
 					if cfg!(feature = "cuda") {
 						(
-							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-linux-x64-gpu-1.17.0.tgz",
-							"66FF4B35B9EF8E887959093FE9D17976BE9D5FD4412ED6C4B55D88EE35410281"
+							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-linux-x64-gpu-1.17.1.tgz",
+							"751A7FF60A064A309658574FC4D26F48ABDD3864C1036325F2D4EBF7BBD7FA2D"
 						)
 					} else {
 						(
-							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-linux-x64-1.17.0.tgz",
-							"83214CA909838BCF5491E53B2A27A5E8A2F788DC3F4C68820BB0C01ECA2B7558"
+							"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-linux-x64-1.17.1.tgz",
+							"FB361B4238596125A44ECADFCA35F21F7908440B381C2A59B2965181735B8DA9"
 						)
 					}
 				}
 				"i686-pc-windows-msvc" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-win-x86-1.17.0.tgz",
-					"64B2AE803EA270DECF08C2143075262F8A608A8999DE988B2CFA4294470946DC"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-win-x86-1.17.1.tgz",
+					"057B6015F35F5F48C03AF092577197BA738FD3B11EBB7205C0FE72C5A7B0786B"
 				),
 				"aarch64-linux-android" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-android-arm64-1.17.0.tgz",
-					"E5294ED5FF7F3279ECEDB0E9007EFFFC053AB50E6F44AEDB9B32CA6D9257F04F"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-android-arm64-1.17.1.tgz",
+					"FA8FADC9D73DBF1225687095F570E59781560B3883C8740C60E72D38FA26A6F4"
 				),
 				"x86_64-linux-android" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-android-x64-1.17.0.tgz",
-					"2790DC9E1C5BD3A06E418C34007AE73AE1333E50A71330B30E6DE4653740A342"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-android-x64-1.17.1.tgz",
+					"5BB8D4459BFA9D1BD4053B123A632E2530C204767E0BAA96E88BAC622518DD4B"
 				),
 				"aarch64-apple-ios" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-ios-arm64-1.17.0.tgz",
-					"0AE3B6755DCAE66D6F64A467D597CBABF085EE4F8761C3EE9D6944A013209500"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-ios-arm64-1.17.1.tgz",
+					"0C69088E9EBF54372C68F0C013C2771555B6BD5BCEF828236C412441E72A3433"
 				),
 				"aarch64-apple-ios-sim" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-ios-sim-arm64-1.17.0.tgz",
-					"17C8108ACA3CB8696B10BBDF7BC36C098A03A5667C45D767A01C6E6F375E979A"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-ios-sim-arm64-1.17.1.tgz",
+					"D6A9D2EBD8A8C39D09B2610AB2B9596E0248E882DBA69ABCC73D5C8996D3F512"
 				),
 				"x86_64-apple-ios" => (
-					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.0/onnxruntime-ios-sim-x86_64-1.17.0.tgz",
-					"A9038F24F7185594E35DA5A5144DDAA2E84D9F8B065272A956D6339F68AF05CD"
+					"https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.1/onnxruntime-ios-sim-x86_64-1.17.1.tgz",
+					"48CA548FB56C8BC2F7EDF5347DC4A466654F739F3EC1D63FA58FA1E71EAEE8C1"
 				),
 				x => panic!("downloaded binaries not available for target {x}\nyou may have to compile ONNX Runtime from source")
 			};
