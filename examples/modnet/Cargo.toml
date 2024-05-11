@@ -5,7 +5,7 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
-ort = { path = "../../" }
+voicevox-ort = { path = "../../" }
 ndarray = "0.15"
 tracing-subscriber = { version = "0.3", default-features = false, features = [ "env-filter", "fmt" ] }
 image = "0.24"
@@ -13,5 +13,5 @@ tracing = "0.1"
 show-image = { version = "0.13", features = [ "image", "raqote" ] }
 
 [features]
-load-dynamic = [ "ort/load-dynamic" ]
-cuda = [ "ort/cuda" ]
+load-dynamic = [ "voicevox-ort/load-dynamic" ]
+cuda = [ "voicevox-ort/cuda" ]

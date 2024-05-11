@@ -5,7 +5,7 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
-ort = { path = "../../" }
+voicevox-ort = { path = "../../" }
 
 [features]
-load-dynamic = [ "ort/load-dynamic" ]
+load-dynamic = [ "voicevox-ort/load-dynamic" ]

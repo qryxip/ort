@@ -45,13 +45,17 @@ jobs:
           toolchain: stable
       - uses: Swatinem/rust-cache@v1
       - name: Run tests
+        shell: bash
         run: |
-          cargo test -p ort --verbose --features fetch-models -- --test-threads 1
+          # exclude doctests on Windows
+          [ "$RUNNER_OS" = Windows ] && targets=--tests || targets=
+          cargo test -p voicevox-ort --verbose --features fetch-models "$targets" -- --test-threads 1
           # Test examples that use in-tree graphs (do NOT run any of the examples that download ~700 MB graphs from pyke parcel...)
           cargo run --example custom-ops
   test-wasm:
     name: Test WebAssembly
     runs-on: ubuntu-latest
+    if: false # we don't support WASM yet
     steps:
       - uses: actions/checkout@v4
       - name: Install nightly Rust toolchain

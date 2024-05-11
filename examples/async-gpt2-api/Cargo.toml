@@ -5,7 +5,7 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
-ort = { path = "../../", features = [ "fetch-models" ] }
+voicevox-ort = { path = "../../", features = [ "fetch-models" ] }
 ndarray = "0.15"
 tokenizers = { version = ">=0.13.4", default-features = false, features = [ "onig" ] }
 rand = "0.8"
@@ -21,5 +21,5 @@ anyhow = "1.0"
 async-stream = "0.3"
 
 [features]
-load-dynamic = [ "ort/load-dynamic" ]
-cuda = [ "ort/cuda" ]
+load-dynamic = [ "voicevox-ort/load-dynamic" ]
+cuda = [ "voicevox-ort/cuda" ]

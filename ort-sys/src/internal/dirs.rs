@@ -1,6 +1,6 @@
 // based on https://github.com/dirs-dev/dirs-sys-rs/blob/main/src/lib.rs
 
-pub const PYKE_ROOT: &str = "ort.pyke.io";
+pub const PYKE_ROOT: &str = "voicevox_ort";
 
 #[cfg(all(target_os = "windows", target_arch = "x86"))]
 macro_rules! win32_extern {

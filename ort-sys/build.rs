@@ -5,8 +5,6 @@ use std::{
 
 const ORT_ENV_SYSTEM_LIB_LOCATION: &str = "ORT_LIB_LOCATION";
 const ORT_ENV_SYSTEM_LIB_PROFILE: &str = "ORT_LIB_PROFILE";
-#[cfg(feature = "download-binaries")]
-const ORT_EXTRACT_DIR: &str = "onnxruntime";
 
 const DIST_TABLE: &str = include_str!("dist.txt");
 
@@ -316,11 +314,38 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 	} else {
 		#[cfg(feature = "download-binaries")]
 		{
+			#[cfg(any(
+				feature = "tensorrt",
+				feature = "openvino",
+				feature = "onednn",
+				feature = "nnapi",
+				feature = "coreml",
+				feature = "xnnpack",
+				feature = "rocm",
+				feature = "acl",
+				feature = "armnn",
+				feature = "tvm",
+				feature = "migraphx",
+				feature = "rknpu",
+				feature = "vitis",
+				feature = "cann",
+				feature = "qnn"
+			))]
+			compile_error!("unsupported EP");
+
 			let target = env::var("TARGET").unwrap().to_string();
 			let designator = if cfg!(any(feature = "cuda", feature = "tensorrt")) {
 				if lib_exists("cudart64_12.dll") || lib_exists("libcudart.so.12") { "cu12" } else { "cu11" }
 			} else if cfg!(feature = "rocm") {
 				"rocm"
+			} else {
+				"none"
+			};
+			let _ = designator; // ignores the above
+			let designator = if cfg!(feature = "directml") {
+				"directml"
+			} else if cfg!(feature = "cuda") {
+				"cu12" // we always use specific version of CUDA, no matter what version of CUDA is installed
 			} else {
 				"none"
 			};
@@ -351,7 +376,8 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 				cache_dir = env::var("OUT_DIR").unwrap().into();
 			}
 
-			let lib_dir = cache_dir.join(ORT_EXTRACT_DIR);
+			let ort_extract_dir = prebuilt_url.split('/').last().unwrap().strip_suffix(".tgz").unwrap();
+			let lib_dir = cache_dir.join(ort_extract_dir);
 			if !lib_dir.exists() {
 				let downloaded_file = fetch_file(prebuilt_url);
 				assert!(verify_file(&downloaded_file, prebuilt_hash), "hash of downloaded ONNX Runtime binary does not match!");

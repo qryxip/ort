@@ -5,9 +5,9 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
-ort = { path = "../../", features = [ "fetch-models" ] }
+voicevox-ort = { path = "../../", features = [ "fetch-models" ] }
 ndarray = "0.15"
 
 [features]
-load-dynamic = [ "ort/load-dynamic" ]
-cuda = [ "ort/cuda" ]
+load-dynamic = [ "voicevox-ort/load-dynamic" ]
+cuda = [ "voicevox-ort/cuda" ]

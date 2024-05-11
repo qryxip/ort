@@ -1,11 +1,11 @@
 [package]
-name = "ort-sys"
+name = "voicevox-ort-sys"
 description = "Unsafe Rust bindings for ONNX Runtime 1.17 - Optimize and Accelerate Machine Learning Inferencing"
 version = "2.0.0-rc.2"
 edition = "2021"
 rust-version = "1.70"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/pykeio/ort"
+repository = "https://github.com/VOICEVOX/ort"
 documentation = "https://ort.pyke.io/"
 keywords = [ "machine-learning", "ai", "ml" , "sys"]
 categories = [ "algorithms", "mathematics", "science" ]
@@ -13,6 +13,9 @@ authors = [
 	"pyke.io <contact@pyke.io>"
 ]
 include = [ "src/", "dist.txt", "build.rs", "LICENSE-APACHE", "LICENSE-MIT" ]
+
+[lib]
+name = "ort_sys"
 
 [features]
 default = []

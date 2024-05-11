@@ -1,19 +1,30 @@
-none	aarch64-apple-darwin	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-apple-darwin.tgz	4D3EFABA9B329900B400570FBC1A1F72899149EB3756F9540772701944DC5E49
-none	aarch64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-pc-windows-msvc.tgz	7BCECBBC15F64C631051C894C5044FB01658F171D7B5D4E9635D7D7F464B8B3E
-none	aarch64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-unknown-linux-gnu.tgz	CA36FB040F127C5CAFA081BAC713240EE8C3F4D9F1BD7B789B789FFDD4885F0F
+none	aarch64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-arm64-1.17.3.tgz	A11F02FB263783C4202E11E41199D88C510C66F375C092259BC73FA8F25DEB7D
+#none	aarch64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-pc-windows-msvc.tgz	7BCECBBC15F64C631051C894C5044FB01658F171D7B5D4E9635D7D7F464B8B3E
+none	aarch64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-arm64-1.17.3.tgz	5176F952D3C694825D2408BE37C0D13463631D2B3E956F6BFB84EAEE931726AC
 
-none	x86_64-apple-darwin	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-x86_64-apple-darwin.tgz	938EFA25B53283CA4768E6A779E8BFCA3423468C617FBA458A6E2CA04D2B2E3F
-none	x86_64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-x86_64-pc-windows-msvc.tgz	F28C68199A3CDE9AD0D748994894AE2920BDB0A258D3F390E715975FBAB5B4DA
-none	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-x86_64-unknown-linux-gnu.tgz	6FAF334246A635808FCDAC6D5550C4D56814B1E92CCA5FC0642AF41437BF071F
+none	armv7-unknown-linux-gnueabihf	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-armhf-1.17.3.tgz	F1A0A14FB47B6904EEB38BEE7D550B858788784765684CF7928AA11136354FC7
 
-cu11	x86_64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-pc-windows-msvc.tgz	9AE21DECB9BE1270CD850276AAC1AB9C2E2AE978B563B733804F5DF7DACC3BE5
-cu12	x86_64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda12-v1.17.3-x86_64-pc-windows-msvc.tgz	8748005ED6F11A3DA741601FA41D0C6DCCD9FABF704A0853BD3D2CE82FBD49F0
-cu11	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-unknown-linux-gnu.tgz	D4C264EA6805790D4C8B51D166EF6BD407FB3ECC641B33AEFE77FCD5BF0C6ECA
-cu12	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda12-v1.17.3-x86_64-unknown-linux-gnu.tgz	C23A69F709DF91D2BB185D76A29901BD4BE81CD66D85DBCFC5E8BCD851DE9891
-rocm	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_rocm-v1.17.3-x86_64-unknown-linux-gnu.tgz	50E39B38484A0676B3D24365149CE9E7760F658B552EFE5A9382AB503D73D7E7
+none	x86_64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-x86_64-1.17.3.tgz	14A29904F236B8EF90835422FEA985E6892A94BA8B0E660325025F1DF045C870
+none	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-1.17.3.tgz	EB40E58F3BA0BA8D256847429B4511CDAE4C81805891C94F0C58220E3E17CDA8
+none	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-x64-1.17.3.tgz	65BBCEC997F9854A721B982CD89D11F92D48F122270B9068BCD919E6C13606B5
+
+none	i686-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x86-1.17.3.tgz	5B4CD789F5FA4936E28A640753EE46E86C4F65792BE7D074E8AC900410D94757
+
+directml	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-gpu-1.17.3.tgz	85345B4D7371C9A07C38ABDE853694FB0311EA2E41953DF3CCB052C564BAC8C2
+#cu11	x86_64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-pc-windows-msvc.tgz	9AE21DECB9BE1270CD850276AAC1AB9C2E2AE978B563B733804F5DF7DACC3BE5
+cu12	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-gpu-1.17.3.tgz	85345B4D7371C9A07C38ABDE853694FB0311EA2E41953DF3CCB052C564BAC8C2
+#cu11	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-unknown-linux-gnu.tgz	D4C264EA6805790D4C8B51D166EF6BD407FB3ECC641B33AEFE77FCD5BF0C6ECA
+cu12	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-x64-gpu-1.17.3.tgz	6212F2BD130BAD7F59027DB24DC4DD8510E01FAFE875E04E7863A99B9D8BE400
+#rocm	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_rocm-v1.17.3-x86_64-unknown-linux-gnu.tgz	50E39B38484A0676B3D24365149CE9E7760F658B552EFE5A9382AB503D73D7E7
 
 # todo: update WASM build to 1.17.3
-none	wasm32-wasi	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-none	wasm32-wasi-preview1	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-none	wasm32-wasi-preview2	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-none	wasm32-unknown-unknown	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
+#none	wasm32-wasi	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
+#none	wasm32-wasi-preview1	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
+#none	wasm32-wasi-preview2	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
+#none	wasm32-unknown-unknown	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
+
+none	aarch64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-android-arm64-1.17.3.tgz	A8EB02DF2153EF85BDE5C115F6802508077A98348F20FCFE12EC6D1A80DA1B53
+none	x86_64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-android-x64-1.17.3.tgz	DEB8D2687E5B8CFD0D80AF4D1C572248B999C62C6BCBF13108D5F22B4BBC78CE
+none	aarch64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-arm64-1.17.3.tgz	8687C8E358B65D84D5D2AD4BE9C577227B7D20CD866DF27133185DD0575B5B36
+none	aarch64-apple-ios-sim	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-sim-arm64-1.17.3.tgz	0561A9A1CA0BF3071C5C5CFCA69A1208338C8DDFE924A24A1A26DA618651B4AB
+none	x86_64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-sim-x86_64-1.17.3.tgz	B3C253258292E71B7D136E4C0DD0E4598BDCDE98285958020BE86B7014C0E1BA

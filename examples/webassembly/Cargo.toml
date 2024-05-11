@@ -9,7 +9,7 @@ name = "ortwasm"
 crate-type = ["cdylib"]
 
 [dependencies]
-ort = { path = "../../" }
+voicevox-ort = { path = "../../" }
 ndarray = "0.15"
 wasm-bindgen = "0.2.92"
 web-sys = "0.3"
@@ -22,4 +22,4 @@ wasm-bindgen-test = "0.3"
 console_error_panic_hook = "0.1"
 
 [features]
-load-dynamic = [ "ort/load-dynamic" ]
+load-dynamic = [ "voicevox-ort/load-dynamic" ]
