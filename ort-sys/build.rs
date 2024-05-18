@@ -341,11 +341,11 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 			} else {
 				"none"
 			};
-			let _ = designator; // ignores the above
+			let _ = designator; // 上記のものを無視する
 			let designator = if cfg!(feature = "directml") {
 				"directml"
 			} else if cfg!(feature = "cuda") {
-				"cu12" // we always use specific version of CUDA, no matter what version of CUDA is installed
+				"cu12" // ビルド環境に何がインストールされていようが、常にCUDA 12を使う
 			} else {
 				"none"
 			};

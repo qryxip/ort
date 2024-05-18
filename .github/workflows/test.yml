@@ -47,7 +47,7 @@ jobs:
       - name: Run tests
         shell: bash
         run: |
-          # exclude doctests on Windows
+          # ONNX Runtimeの静的リンクをやめているため、Windowsではdoctestを無効化する
           [ "$RUNNER_OS" = Windows ] && targets=--tests || targets=
           cargo test -p voicevox-ort --verbose --features fetch-models "$targets" -- --test-threads 1
           # Test examples that use in-tree graphs (do NOT run any of the examples that download ~700 MB graphs from pyke parcel...)
@@ -55,7 +55,7 @@ jobs:
   test-wasm:
     name: Test WebAssembly
     runs-on: ubuntu-latest
-    if: false # we don't support WASM yet
+    if: false # WASM版はまだ提供しないため、テストもしない
     steps:
       - uses: actions/checkout@v4
       - name: Install nightly Rust toolchain
