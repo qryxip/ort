@@ -51,7 +51,7 @@ jobs:
   coverage:
     name: Code coverage
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
+    if: false # カバレッジはpykeio/ortに任せる
     steps:
       - name: Checkout sources
         uses: actions/checkout@v4
