@@ -133,8 +133,8 @@ fn copy_libraries(lib_dir: &Path, out_dir: &Path) {
 
 		#[cfg(target_os = "linux")]
 		{
-			let main_dy = lib_dir.join("libonnxruntime.so");
-			let versioned_dy = out_dir.join("libonnxruntime.so.1.17.3");
+			let main_dy = lib_dir.join("libvoicevox_onnxruntime.so");
+			let versioned_dy = out_dir.join("libvoicevox_onnxruntime.so.1.17.3");
 			if main_dy.exists() && !versioned_dy.exists() {
 				if versioned_dy.is_symlink() {
 					fs::remove_file(&versioned_dy).unwrap();
@@ -412,7 +412,7 @@ fn real_main(link: bool) {
 
 	if link {
 		if needs_link {
-			println!("cargo:rustc-link-lib=onnxruntime");
+			println!("cargo:rustc-link-lib=voicevox_onnxruntime");
 			println!("cargo:rustc-link-search=native={}", lib_dir.display());
 		}
 

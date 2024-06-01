@@ -401,6 +401,15 @@ impl SessionBuilder {
 		Ok(InMemorySession { session, phantom: PhantomData })
 	}
 
+	/// # Panics
+	///
+	/// `opts`に`'\0'`が含まれている場合パニックする。
+	pub fn commit_from_vv_bin(self, bin: &[u8], opts: &str) -> Result<Session> {
+		let opts = CString::new(opts).unwrap_or_else(|e| panic!("`opts`が不正です: {e}"));
+		ortsys![unsafe AddSessionConfigEntry(self.session_options_ptr.as_ptr(), c"session.decrypt_vv_model".as_ptr(), opts.as_ptr())];
+		self.commit_from_memory(bin)
+	}
+
 	/// Load an ONNX graph from memory and commit the session.
 	pub fn commit_from_memory(mut self, model_bytes: &[u8]) -> Result<Session> {
 		let mut session_ptr: *mut ort_sys::OrtSession = std::ptr::null_mut();

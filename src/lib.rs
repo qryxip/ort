@@ -101,14 +101,14 @@ pub(crate) static G_ORT_LIB: OnceLock<Arc<libloading::Library>> = OnceLock::new(
 #[cfg(feature = "load-dynamic")]
 pub(crate) fn dylib_path() -> &'static String {
 	G_ORT_DYLIB_PATH.get_or_init(|| {
-		let path = match std::env::var("ORT_DYLIB_PATH") {
+		let path = match std::env::var("VOICEVOX_ORT_DYLIB_PATH") {
 			Ok(s) if !s.is_empty() => s,
 			#[cfg(target_os = "windows")]
-			_ => "onnxruntime.dll".to_owned(),
+			_ => "voicevox_onnxruntime.dll".to_owned(),
 			#[cfg(any(target_os = "linux", target_os = "android"))]
-			_ => "libonnxruntime.so".to_owned(),
+			_ => "libvoicevox_onnxruntime.so".to_owned(),
 			#[cfg(any(target_os = "macos", target_os = "ios"))]
-			_ => "libonnxruntime.dylib".to_owned()
+			_ => "libvoicevox_onnxruntime.dylib".to_owned()
 		};
 		Arc::new(path)
 	})
@@ -129,7 +129,9 @@ pub(crate) fn lib_handle() -> &'static libloading::Library {
 				.join(&path);
 			if relative.exists() { relative } else { path }
 		};
-		let lib = unsafe { libloading::Library::new(&absolute_path) }
+		// C:\Windows\System32\onnxruntime.dllに怯える必要はもうないため、CWDは見ない
+		let _ = absolute_path;
+		let lib = unsafe { libloading::Library::new(dylib_path()) }
 			.unwrap_or_else(|e| panic!("An error occurred while attempting to load the ONNX Runtime binary at `{}`: {e}", absolute_path.display()));
 		Arc::new(lib)
 	})
