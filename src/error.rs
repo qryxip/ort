@@ -263,7 +263,9 @@ pub enum Error {
 	#[error("Could't get device ID from memory info: {0}")]
 	GetDeviceId(ErrorInternal),
 	#[error("Training API is not enabled in this build of ONNX Runtime.")]
-	TrainingNotEnabled
+	TrainingNotEnabled,
+	#[error("This ONNX Runtime does not support \"vv-bin\" format (note: load/link `voicevox_onnxruntime` instead of `onnxruntime`)")]
+	VvBinNotSupported
 }
 
 impl Error {

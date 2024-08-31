@@ -446,7 +446,11 @@ impl SessionBuilder {
 		Ok(session)
 	}
 
+	#[cfg(feature = "__init-for-voicevox")]
 	pub fn commit_from_vv_bin(self, bin: &[u8]) -> Result<Session> {
+		if !crate::EnvHandle::get().expect("should be present").is_voicevox_onnxruntime {
+			return Err(Error::VvBinNotSupported);
+		}
 		ortsys![unsafe AddSessionConfigEntry(self.session_options_ptr.as_ptr(), c"session.use_vv_bin".as_ptr(), c"1".as_ptr())];
 		self.commit_from_memory(bin)
 	}
