@@ -447,7 +447,7 @@ impl SessionBuilder {
 	}
 
 	pub fn commit_from_vv_bin(self, bin: &[u8]) -> Result<Session> {
-		ortsys![unsafe AddSessionConfigEntry(self.session_options_ptr.as_ptr(), c"session.decrypt_vv_model".as_ptr(), c"1".as_ptr())];
+		ortsys![unsafe AddSessionConfigEntry(self.session_options_ptr.as_ptr(), c"session.use_vv_bin".as_ptr(), c"1".as_ptr())];
 		self.commit_from_memory(bin)
 	}
 }
