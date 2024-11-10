@@ -442,6 +442,10 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 			}
 
 			const OUR_VERSION: &str = include_str!("./VERSION_NUMBER");
+			dbg!(&lib_dir);
+			for entry in dbg!(lib_dir.read_dir()).unwrap() {
+				let _ = dbg!(entry.unwrap());
+			}
 			let their_version = fs::read_to_string(lib_dir.join("VERSION_NUMBER")).unwrap_or_else(|e| panic!("`VERSION_NUMBER`を読めませんでした: {e}"));
 			assert_eq!(OUR_VERSION.trim_end(), their_version.trim_end(), "`VERSION_NUMBER`が異なります");
 
