@@ -427,7 +427,10 @@ fn prepare_libort_dir() -> (PathBuf, bool) {
 
 			let ort_extract_dir = prebuilt_url.split('/').last().unwrap().strip_suffix(".tgz").unwrap();
 			let lib_dir = cache_dir.join(ort_extract_dir);
-			if !lib_dir.exists() {
+			dbg!(&lib_dir);
+			if !dbg!(lib_dir.exists()) {
+				dbg!(prebuilt_url);
+				dbg!(prebuilt_hash);
 				let downloaded_file = fetch_file(prebuilt_url);
 				assert!(verify_file(&downloaded_file, prebuilt_hash), "hash of downloaded ONNX Runtime binary does not match!");
 				extract_tgz(&downloaded_file, &cache_dir);
