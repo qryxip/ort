@@ -389,6 +389,14 @@ impl SessionBuilder {
 
 	/// Load an ONNX graph from memory and commit the session.
 	pub fn commit_from_memory(mut self, model_bytes: &[u8]) -> Result<Session> {
+		unsafe {
+			let build_info = (*crate::api().as_ptr()).GetBuildInfoString.expect("`GetBuildInfoString` must be present")();
+			let build_info = std::ffi::CStr::from_ptr(build_info).to_str().expect("should be UTF-8");
+			if !build_info.contains("-DCPUINFO_SUPPORTED") {
+				panic!("oh no, no `cpuinfo`!!!!!: {build_info:?}");
+			}
+		}
+
 		let mut session_ptr: *mut ort_sys::OrtSession = std::ptr::null_mut();
 
 		let env = get_environment()?;
