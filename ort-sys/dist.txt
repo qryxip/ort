@@ -1,10 +1,10 @@
-none	aarch64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-arm64-1.17.3.tgz	A11F02FB263783C4202E11E41199D88C510C66F375C092259BC73FA8F25DEB7D
+none	aarch64-apple-darwin	https://github.com/qryxip/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-osx-arm64-1.17.3.tgz	EAB29DF2D228F0FE93AF249F91F88C152D2B7923CA27FE9E90538870D8E39CEC
 #none	aarch64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-pc-windows-msvc.tgz	7BCECBBC15F64C631051C894C5044FB01658F171D7B5D4E9635D7D7F464B8B3E
 none	aarch64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-arm64-1.17.3.tgz	5176F952D3C694825D2408BE37C0D13463631D2B3E956F6BFB84EAEE931726AC
 
 none	armv7-unknown-linux-gnueabihf	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-armhf-1.17.3.tgz	F1A0A14FB47B6904EEB38BEE7D550B858788784765684CF7928AA11136354FC7
 
-none	x86_64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-x86_64-1.17.3.tgz	14A29904F236B8EF90835422FEA985E6892A94BA8B0E660325025F1DF045C870
+none	x86_64-apple-darwin	https://github.com/qryxip/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-osx-x86_64-1.17.3.tgz	9EE50C4B4DA9BFE1AB35A0DF8B034B1125257914E64FCE4B4A7E257AB60DD31F
 none	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-1.17.3.tgz	EB40E58F3BA0BA8D256847429B4511CDAE4C81805891C94F0C58220E3E17CDA8
 none	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-x64-1.17.3.tgz	65BBCEC997F9854A721B982CD89D11F92D48F122270B9068BCD919E6C13606B5
 
