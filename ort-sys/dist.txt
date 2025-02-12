@@ -1,30 +1,15 @@
-none	aarch64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-arm64-1.17.3.tgz	A11F02FB263783C4202E11E41199D88C510C66F375C092259BC73FA8F25DEB7D
-#none	aarch64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_static-v1.17.3-aarch64-pc-windows-msvc.tgz	7BCECBBC15F64C631051C894C5044FB01658F171D7B5D4E9635D7D7F464B8B3E
-none	aarch64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-arm64-1.17.3.tgz	5176F952D3C694825D2408BE37C0D13463631D2B3E956F6BFB84EAEE931726AC
-
-none	armv7-unknown-linux-gnueabihf	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-armhf-1.17.3.tgz	F1A0A14FB47B6904EEB38BEE7D550B858788784765684CF7928AA11136354FC7
-
-none	x86_64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-osx-x86_64-1.17.3.tgz	14A29904F236B8EF90835422FEA985E6892A94BA8B0E660325025F1DF045C870
-none	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-1.17.3.tgz	EB40E58F3BA0BA8D256847429B4511CDAE4C81805891C94F0C58220E3E17CDA8
-none	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-x64-1.17.3.tgz	65BBCEC997F9854A721B982CD89D11F92D48F122270B9068BCD919E6C13606B5
-
-none	i686-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x86-1.17.3.tgz	5B4CD789F5FA4936E28A640753EE46E86C4F65792BE7D074E8AC900410D94757
-
-directml	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-gpu-1.17.3.tgz	85345B4D7371C9A07C38ABDE853694FB0311EA2E41953DF3CCB052C564BAC8C2
-#cu11	x86_64-pc-windows-msvc	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-pc-windows-msvc.tgz	9AE21DECB9BE1270CD850276AAC1AB9C2E2AE978B563B733804F5DF7DACC3BE5
-cu12+cudnn8	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-win-x64-gpu-1.17.3.tgz	85345B4D7371C9A07C38ABDE853694FB0311EA2E41953DF3CCB052C564BAC8C2
-#cu11	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_cuda11-v1.17.3-x86_64-unknown-linux-gnu.tgz	D4C264EA6805790D4C8B51D166EF6BD407FB3ECC641B33AEFE77FCD5BF0C6ECA
-cu12+cudnn8	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-linux-x64-gpu-1.17.3.tgz	6212F2BD130BAD7F59027DB24DC4DD8510E01FAFE875E04E7863A99B9D8BE400
-#rocm	x86_64-unknown-linux-gnu	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.3/ortrs-msort_dylib_rocm-v1.17.3-x86_64-unknown-linux-gnu.tgz	50E39B38484A0676B3D24365149CE9E7760F658B552EFE5A9382AB503D73D7E7
-
-# todo: update WASM build to 1.17.3
-#none	wasm32-wasi	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-#none	wasm32-wasi-preview1	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-#none	wasm32-wasi-preview2	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-#none	wasm32-unknown-unknown	https://parcel.pyke.io/v2/delivery/ortrs/packages/msort-binary/1.17.1/ortrs-pkort_static_b2-v1.17.1-wasm32-unknown-unknown.tgz	41A5713B37EEE40A0D7608B9E77AEB3E1A5DCE6845496A5F5E65F89A13E45089
-
-none	aarch64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-android-arm64-1.17.3.tgz	A8EB02DF2153EF85BDE5C115F6802508077A98348F20FCFE12EC6D1A80DA1B53
-none	x86_64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-android-x64-1.17.3.tgz	DEB8D2687E5B8CFD0D80AF4D1C572248B999C62C6BCBF13108D5F22B4BBC78CE
-none	aarch64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-arm64-1.17.3.tgz	8687C8E358B65D84D5D2AD4BE9C577227B7D20CD866DF27133185DD0575B5B36
-none	aarch64-apple-ios-sim	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-sim-arm64-1.17.3.tgz	0561A9A1CA0BF3071C5C5CFCA69A1208338C8DDFE924A24A1A26DA618651B4AB
-none	x86_64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/1.17.3/onnxruntime-ios-sim-x86_64-1.17.3.tgz	B3C253258292E71B7D136E4C0DD0E4598BDCDE98285958020BE86B7014C0E1BA
+none	aarch64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-android-arm64-1.17.3.tgz	663B237A880B58D0EA38600D5414B2E2576F5597D5A129C1E0598A0E0D1958FE
+none	x86_64-linux-android	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-android-x64-1.17.3.tgz	B056E8A6E9F90405C273D96155CAC0509DCE5CE1A5F52C2457C329119334EB3F
+none	aarch64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-ios-arm64-1.17.3.tgz	4C86D5DAFCD52C95EA57D44FBA84BBFE5FF388A75315E9375B3702DD48E8EFB9
+none	aarch64-apple-ios-sim	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-ios-sim-arm64-1.17.3.tgz	9A38F567DDA14D2F012E0F2F39029F041FEB51833D3125F8CEBC5DD61C4BE1E8
+none	x86_64-apple-ios	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-ios-sim-x86_64-1.17.3.tgz	D250AA7F9C638E7FF26F3E66045B21B2284FF4FE4FA65F8844753AD161C4F09A
+none	aarch64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-linux-arm64-1.17.3.tgz	0B4E1770C5412DB6A2F31BA11975FA5302C009773216069DC0A0D306FCCC16B4
+none	armv7-unknown-linux-gnueabihf	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-linux-armhf-1.17.3.tgz	FD4A2FDF4CB212E5C0D1B316FDCE20BC25A0967001B121DB01290E20AAF398E3
+none	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-linux-x64-1.17.3.tgz	D8794D5016B70AEDD97F2ECEB9EB1A8D1FF940A5BE3D337C2A9568856454924D
+cu12+cudnn8	x86_64-unknown-linux-gnu	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-linux-x64-cuda-1.17.3.tgz	D1DFFE548DC9F96F8C43F7AF13342DF6286F0AA1F067D52FCC8367720BC68334
+none	aarch64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-osx-arm64-1.17.3.tgz	51D43788C95682FAB04CA468D66F0829A9F65FB9BF4830D7F934FF344B00D927
+none	x86_64-apple-darwin	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-osx-x86_64-1.17.3.tgz	C60702EB5F327C3EE4087CEBCB7B4F98E2F47B43AB2C64EF54D91BCB2F0EE092
+none	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-win-x64-1.17.3.tgz	9FF42ABB0533B5757BCCBAAFEDEAD43AE82239E9C064C27022118525500D6CC5
+cu12+cudnn8	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-win-x64-cuda-1.17.3.tgz	AE9D4C28407BABEF9E1A94CF60C23FDBCC582EB909CD701CFF20DC9DE0CC70F3
+directml	x86_64-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-win-x64-dml-1.17.3.tgz	5A162933B6D6E53A597C80292573F7AC29136CF2016ECAF160C0B80730F50AF6
+none	i686-pc-windows-msvc	https://github.com/VOICEVOX/onnxruntime-builder/releases/download/onnxruntime-1.17.3/onnxruntime-win-x86-1.17.3.tgz	3799F43FF33F392D064EF72BBE3AC7C6F053BFA34C709CC8204058A81EF0F3A5
