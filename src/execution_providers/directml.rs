@@ -56,9 +56,49 @@ impl ExecutionProvider for DirectMLExecutionProvider {
 	fn register(&self, session_builder: &mut SessionBuilder) -> Result<(), RegisterError> {
 		#[cfg(any(feature = "load-dynamic", feature = "directml"))]
 		{
-			use crate::AsPointer;
+			use std::mem::MaybeUninit;
 
-			super::define_ep_register!(OrtSessionOptionsAppendExecutionProvider_DML(options: *mut ort_sys::OrtSessionOptions, device_id: core::ffi::c_int) -> ort_sys::OrtStatusPtr);
+			use crate::{AsPointer, ortsys};
+
+			#[derive(Clone, Copy)]
+			#[repr(C)]
+			enum OrtDmlPerformancePreference {
+				Default = 0,
+				HighPerformance = 1,
+				MinimumPower = 2
+			}
+
+			#[derive(Clone, Copy)]
+			#[repr(u32)]
+			enum OrtDmlDeviceFilter {
+				Any = 0xffffffff,
+				Gpu = 1 << 0,
+				Npu = 1 << 1
+			}
+
+			#[expect(non_snake_case)]
+			#[repr(C)]
+			struct OrtDmlDeviceOptions {
+				Preference: OrtDmlPerformancePreference,
+				Filter: OrtDmlDeviceFilter
+			}
+
+			#[expect(non_snake_case)]
+			#[repr(C)]
+			struct OrtDmlApi {
+				OrtSessionOptionsAppendExecutionProvider_DML:
+					unsafe extern "system" fn(options: *mut ort_sys::OrtSessionOptions, device_id: core::ffi::c_int) -> ort_sys::OrtStatusPtr // , …
+			}
+
+			let mut provider_api = MaybeUninit::uninit();
+			ortsys![unsafe GetExecutionProviderApi(c"DML".as_ptr(), ort_sys::ORT_API_VERSION, provider_api.as_mut_ptr())];
+			let provider_api = unsafe { provider_api.assume_init() };
+			let provider_api = unsafe { provider_api.cast::<OrtDmlApi>() };
+			assert!(!provider_api.is_null() && provider_api.is_aligned());
+			let OrtDmlApi {
+				OrtSessionOptionsAppendExecutionProvider_DML
+			} = unsafe { provider_api.read() };
+
 			return Ok(unsafe {
 				crate::error::status_to_result(OrtSessionOptionsAppendExecutionProvider_DML(session_builder.ptr_mut(), self.device_id as _))
 			}?);
